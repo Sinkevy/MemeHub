@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MemeHUB</title>
+    <link rel="icon" type="image/jfif" href="avat.jfif">
+</head>
+<header>
+  <div class="logo">
+    <img src="avat.jfif" alt="Логотип">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="https://discord.gg/KytEFDeu">ДС</a></li>
+      <li><a href="https://discord.gg/KytEFDeu">Телеграм</a></li>
+      <li><a href="https://github.com/Sinkevy">GitHub</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body style="background: linear-gradient(to bottom, #ffcc00, #ff3300);">
+    <h1 class="zagolovolok">Привіт це MemeHUB тут ви знайдете багато мемів!</h1>
+      <h1>Пошук картинок</h1>
+
+  <input type="text" id="searchInput" placeholder="Введіть назву картинки">
+  <button onclick="searchImages()">Пошук</button>
+
+  <div class="gallery" id="imageGallery">
+  </div>
+
+  <script>
+    var images = [
+      { src: 'meme1.jpg', alt: 'meme1' },
+      { src: 'meme2.jpg', alt: 'meme2' },
+      { src: 'meme3.jpg', alt: 'meme3' },
+      { src: 'meme4.jpg', alt: 'meme4' },
+      { src: 'meme5.jpg', alt: 'meme5' },
+      { src: 'meme6.jpeg', alt: 'meme6' },
+      { src: 'meme7.jpg', alt: 'meme7' },
+      { src: 'meme8.jpeg', alt: 'meme8' }
+    ];
+
+    function searchImages() {
+      var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      var filteredImages = images.filter(function(image) {
+        return image.alt.toLowerCase().includes(searchTerm);
+      });
+      displayImages(filteredImages);
+    }
+
+    // Функція для відображення зображень
+    function displayImages(images) {
+      var gallery = document.getElementById('imageGallery');
+      gallery.innerHTML = '';
+      images.forEach(function(image) {
+        var imgElement = document.createElement('img');
+        imgElement.src = image.src;
+        imgElement.alt = image.alt;
+        gallery.appendChild(imgElement);
+      });
+    }
+
+
+  </script>
+    <a href="https://www.google.com/url?sa=i&url=http%3A%2F%2Frisovach.ru%2Fkartinka%2F1574678&psig=AOvVaw3C4gB8cncE26JEn8oSfHee&ust=1686402192831000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNCN0_qftv8CFQAAAAAdAAAAABAE" class="class1">Подивитись мем</a>
+    <img src="meme1.jpg" alt="meme1">
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fkonivjab.net%2F%25D0%25BC%25D0%25B5%25D0%25BC-%25D0%25BF%25D1%2580%25D0%25BE%25D0%25B3%25D1%2580%25D0%25B0%25D0%25BC%25D1%2583%25D0%25B2%25D0%25B0%25D0%25BD%25D0%25BD%25D1%258F%2F&psig=AOvVaw08bq9Jr1XnQRocyE3V_pXB&ust=1686493571622000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNDD3bD0uP8CFQAAAAAdAAAAABAE" class = "myt1">Подивитись мем</a>
+    <img src="meme2.jpg" alt="meme2" width="300" height="400" class="my1">
+    <div class="form-container">
+        <form>
+            <legend class = "class2">Оцініть мем:</legend>
+            <label for="name">Ім'я:</label>
+            <input type="text" id = "name" name = "name" required>
+
+            <label for="email">Електронна адреса:</label>
+            <input type="email" id = "email" name = "email" required>
+
+            <p>Ваша оцінка:</p>
+            <input type="radio" id = "0 - 2" name = "age" value = "2">
+            <label for="0 - 2">0 - 2</label>
+            <input type="radio" id = "3 - 5" name = "age" value="5">
+            <label for="3 - 5">3 - 5</label>
+            <input type="radio" id = "6 - 10" name = "age" value = "10">
+            <label for="6 - 10">6 - 10</label>
+
+            <button class = "button" type = "button" onclick = "sumbitForm()">Відправити</button>
+        </form>
+      </div>
+        <div class="class5">
+        <form>
+            <legend class = "class2">Оцініть мем:</legend>
+            <label for="name">Ім'я:</label>
+            <input type="text" id = "name" name = "name" required>
+
+            <label for="email">Електронна адреса:</label>
+            <input type="email" id = "email" name = "email" required>
+
+            <p>Ваша оцінка:</p>
+            <input type="radio" id = "0 - 2" name = "age" value = "2">
+            <label for="0 - 2">0 - 2</label>
+            <input type="radio" id = "3 - 5" name = "age" value="5">
+            <label for="3 - 5">3 - 5</label>
+            <input type="radio" id = "6 - 10" name = "age" value = "10">
+            <label for="6 - 10">6 - 10</label>
+
+            <button class = "button" type = "button" onclick = "sumbitForm()">Відправити</button>
+        </form>
+        <div class="class6">
+            <form>
+                <legend class = "class2">Оцініть мем:</legend>
+                <label for="name">Ім'я:</label>
+                <input type="text" id = "name" name = "name" required>
+
+                <label for="email">Електронна адреса:</label>
+                <input type="email" id = "email" name = "email" required>
+
+                <p>Ваша оцінка:</p>
+                <input type="radio" id = "0 - 2" name = "age" value = "2">
+                <label for="0 - 2">0 - 2</label>
+                <input type="radio" id = "3 - 5" name = "age" value="5">
+                <label for="3 - 5">3 - 5</label>
+                <input type="radio" id = "6 - 10" name = "age" value = "10">
+                <label for="6 - 10">6 - 10</label>
+
+                <button class = "button" type = "button" onclick = "sumbitForm()">Відправити</button>
+            </form>
+        </div>
+        </form>
+        <div class="class7">
+            <form>
+                <legend class = "class2">Оцініть мем:</legend>
+                <label for="name">Ім'я:</label>
+                <input type="text" id = "name" name = "name" required>
+
+                <label for="email">Електронна адреса:</label>
+                <input type="email" id = "email" name = "email" required>
+
+                <p>Ваша оцінка:</p>
+                <input type="radio" id = "0 - 2" name = "age" value = "2">
+                <label for="0 - 2">0 - 2</label>
+                <input type="radio" id = "3 - 5" name = "age" value="5">
+                <label for="3 - 5">3 - 5</label>
+                <input type="radio" id = "6 - 10" name = "age" value = "10">
+                <label for="6 - 10">6 - 10</label>
+
+                <button class = "button" type = "button" onclick = "sumbitForm()">Відправити</button>
+            </form>
+        </div>
+        <div class="class8">
+            <form>
+                <legend class = "class2">Оцініть мем:</legend>
+                <label for="name">Ім'я:</label>
+                <input type="text" id = "name" name = "name" required>
+
+                <label for="email">Електронна адреса:</label>
+                <input type="email" id = "email" name = "email" required>
+
+                <p>Ваша оцінка:</p>
+                <input type="radio" id = "0 - 2" name = "age" value = "2">
+                <label for="0 - 2">0 - 2</label>
+                <input type="radio" id = "3 - 5" name = "age" value="5">
+                <label for="3 - 5">3 - 5</label>
+                <input type="radio" id = "6 - 10" name = "age" value = "10">
+                <label for="6 - 10">6 - 10</label>
+
+                <button class = "button" type = "button" onclick = "sumbitForm()">Відправити</button>
+            </form>
+        </div>
+        <div class="class9">
+            <form>
+                <legend class = "class2">Оцініть мем:</legend>
+                <label for="name">Ім'я:</label>
+                <input type="text" id = "name" name = "name" required>
+
+                <label for="email">Електронна адреса:</label>
+                <input type="email" id = "email" name = "email" required>
+
+                <p>Ваша оцінка:</p>
+                <input type="radio" id = "0 - 2" name = "age" value = "2">
+                <label for="0 - 2">0 - 2</label>
+                <input type="radio" id = "3 - 5" name = "age" value="5">
+                <label for="3 - 5">3 - 5</label>
+                <input type="radio" id = "6 - 10" name = "age" value = "10">
+                <label for="6 - 10">6 - 10</label>
+
+                <button class = "button" type = "button" onclick = "sumbitForm()">Відправити</button>
+            </form>
+        </div>
+        <div class="class10">
+            <form>
+                <legend class = "class2">Оцініть мем:</legend>
+                <label for="name">Ім'я:</label>
+                <input type="text" id = "name" name = "name" required>
+
+                <label for="email">Електронна адреса:</label>
+                <input type="email" id = "email" name = "email" required>
+
+                <p>Ваша оцінка:</p>
+                <input type="radio" id = "0 - 2" name = "age" value = "2">
+                <label for="0 - 2">0 - 2</label>
+                <input type="radio" id = "3 - 5" name = "age" value="5">
+                <label for="3 - 5">3 - 5</label>
+                <input type="radio" id = "6 - 10" name = "age" value = "10">
+                <label for="6 - 10">6 - 10</label>
+
+                <button class = "button" type = "button" onclick = "sumbitForm()">Відправити</button>
+            </form>
+        </div>
+        <div class="class11">
+            <form>
+                <legend class = "class2">Оцініть мем:</legend>
+                <label for="name">Ім'я:</label>
+                <input type="text" id = "name" name = "name" required>
+
+                <label for="email">Електронна адреса:</label>
+                <input type="email" id = "email" name = "email" required>
+
+                <p>Ваша оцінка:</p>
+                <input type="radio" id = "0 - 2" name = "age" value = "2">
+                <label for="0 - 2">0 - 2</label>
+                <input type="radio" id = "3 - 5" name = "age" value="5">
+                <label for="3 - 5">3 - 5</label>
+                <input type="radio" id = "6 - 10" name = "age" value = "10">
+                <label for="6 - 10">6 - 10</label>
+
+                <button class = "button" type = "button" onclick = "sumbitForm()">Відправити</button>
+            </form>
+
+        </div>
+    <div id="container">
+        <img src="meme3.jpg" alt="meme3" class="meme3" width="400" height="400">
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmemesmix.net%2Fmeme%2Fgt9tcg&psig=AOvVaw0qN1XDgCOR31VC4gKBksgY&ust=1686507897328000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNCmxN-puf8CFQAAAAAdAAAAABBP" class="myt2">Подивитись мем</a>
+        <img src="meme4.jpg" alt="meme4" class="meme4" width="400" height="400">
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpikabu.ru%2Fstory%2Fpitonistam_ne_v_obidu_7991742&psig=AOvVaw0qN1XDgCOR31VC4gKBksgY&ust=1686507897328000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNCmxN-puf8CFQAAAAAdAAAAABBj" class="myt3">Подивитись мем</a>
+        <img src="meme5.jpg" alt="meme5" class="meme5" width="400" height="400">
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmempro.ru%2Fold%2Falbums%2Fprogrammist-jazyki-programmirovanija.html&psig=AOvVaw0lGzF2LhluI9gDuZspMau5&ust=1686564103391000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNi_pIX7uv8CFQAAAAAdAAAAABAd" class="myt4">Подивитись мем</a>
+        <img src="meme6.jpeg" alt="meme6" class="meme6" width="400" height="400">
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpcpro100.info%2Fmemy-pro-programmistov%2F&psig=AOvVaw0lGzF2LhluI9gDuZspMau5&ust=1686564103391000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNi_pIX7uv8CFQAAAAAdAAAAABAx" class="myt5">Подивитись мем</a>
+        <img src="meme7.jpg" alt="meme7" class="meme7" width="400" height="400">
+        <a href="https://images.unian.net/photos/2022_10/1665215699-9441.jpg?r=312723" class="myt6">Подивитись мем</a>
+        <img src="meme8.jpeg" alt="meme8" class="meme8" width="400" height="400">
+        <a href="https://www.depo.ua/uploads/posts/20200925/750x/cpl1HfLCO7kByXX0zVUPIoAgBMJBsR5Y9U8o9R7X.jpeg" class="myt7">Подивитись мем</a>
+        <img src="avat.jfif" alt="icon" class="image1">
+        <img src="descr.png" alt="description" class="image2" width="500" height="200">
+    </div>
+
+</body>
+</html>
+<style>
+
+    .zagolovolok{
+        font-family: cursive;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .class1{
+        position: relative;
+        float: right;
+        margin-right: 1270px;
+        font-family: Arial, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        color: blue
+    }
+    .class2{
+        font-family: cursive;
+        font-size: 25px;
+        font-weight: bold;
+        color: black
+    }
+        @keyframes buttonClick {
+       0% { transform: scale(1); }
+       50% { transform: scale(0.9); }
+       100% { transform: scale(1); }
+     }
+     .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 14px;
+        transitions: background-color 0.3 ease;
+     }
+     .button:hover {
+            background-color: #0056b3;
+     }
+     .button.active {
+         background-color: #003d80;
+     }
+     .button:active {
+        animation: none;
+        transform: scale(0.9);
+     }
+    .form-container {
+      position: absolute;
+      top: 320px;
+      left: 420px;
+    }
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .my1 {
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 770px;
+    }
+    .myt1{
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 1100px;
+        font-family: Arial, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        color: blue
+    }
+    .class5{
+        position: relative;
+        bottom: 370px;
+        left: 1500px;
+    }
+    .class5 label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 10px;
+}
+
+.logo img {
+  height: 90px;
+  width: 160px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  background-color: #ccc;
+  border: 2px solid #999;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li a:hover {
+  background-color: #999;
+  color: #fff;
+}
+      #container {
+        height: 170vh;
+        overflow: auto;
+      }
+
+    .meme3{
+        float: left;
+        position: absolute;
+        top: 500px;
+        right: 2987px;
+    }
+    .meme4{
+        float: left;
+        position: absolute;
+        top: 500px;
+        right: 1900px;
+    }
+    .meme5{
+        float: left;
+        position: absolute;
+        top: 1050px;
+        right: 2987px;
+    }
+    .meme6{
+        float: left;
+        position: absolute;
+        top: 1050px;
+        right: 1900px;
+    }
+    .meme7{
+        float: left;
+        position: absolute;
+        top: 1550px;
+        right: 2987px;
+    }
+    .meme8{
+        float: left;
+        position: absolute;
+        top: 1550px;
+        right: 1900px;
+    }
+    .class6 {
+      float: left;
+      position: absolute;
+      top: 530px;
+      right: 2800px;
+    }
+    .class6 label {
+       display: block;
+       margin-bottom: 10px;
+    }
+    .class7 {
+      float: left;
+      position: absolute;
+      top: 530px;
+      right: 1700px;
+    }
+    .class7 label {
+       display: block;
+       margin-bottom: 10px;
+    }
+    .class8 {
+      float: left;
+      position: absolute;
+      top: 1100px;
+      right: 2800px;
+    }
+    .class8 label {
+       display: block;
+       margin-bottom: 10px;
+    }
+    .class9{
+      float: left;
+      position: absolute;
+      top: 1100px;
+      right: 1710px;
+    }
+    .class9 label{
+       display: block;
+       margin-bottom: 10px;
+    }
+    .class10 {
+      float: left;
+      position: absolute;
+      top: 1600px;
+      right: 2800px;
+    }
+    .class10 label {
+       display: block;
+       margin-bottom: 10px;
+    }
+    .class11{
+      float: left;
+      position: absolute;
+      top: 1600px;
+      right: 1710px;
+    }
+    .class11 label{
+       display: block;
+       margin-bottom: 10px;
+    }
+    .myt2{
+        float: left;
+        position: absolute;
+        top: 480px;
+        right: 2820px;
+        font-family: Arial, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        color: blue
+    }
+    .myt3{
+        float: left;
+        position: absolute;
+        top: 480px;
+        right: 1730px;
+        font-family: Arial, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        color: blue
+    }
+    .myt4{
+        float: left;
+        position: absolute;
+        top: 1050px;
+        right: 2820px;
+        font-family: Arial, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        color: blue
+    }
+    .myt5{
+        float: left;
+        position: absolute;
+        top: 1050px;
+        right: 1730px;
+        font-family: Arial, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        color: blue
+    }
+    .gallery {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .gallery img {
+      position: absolute;
+      top: 10px;
+      left: 720px;
+      width: 400px;
+      height: 350px;
+    }
+    .myt6{
+        float: left;
+        position: absolute;
+        top: 1550px;
+        right: 2820px;
+        font-family: Arial, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        color: blue
+    }
+    .myt7{
+        float: left;
+        position: absolute;
+        top: 1550px;
+        right: 1730px;
+        font-family: Arial, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        color: blue
+    }
+    .image1{
+        width: 250px;
+        height: 150px;
+        position: absolute;
+        top:2170px;
+        right: 2960px;
+        box-shadow: 0 0 25px rgba(0, 102, 204, 0.8);
+    }
+    .image2{
+        position: absolute;
+        top:2130px;
+        right: 2350px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    }
+</style>
